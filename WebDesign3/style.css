@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;700;800&display=swap");
+
+@font-face {
+  font-family: myfont;
+  src: url(./La\ Beauties.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat;
+  /* user-select: none; */
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#main-container {
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  background-image: url(https://images.unsplash.com/photo-1528127269322-539801943592?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+  background-size: cover;
+  background-position: center;
+}
+
+#navBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  width: 100%;
+  color: #fff;
+}
+#navBar #logo {
+  font-family: myfont;
+  font-size: 28px;
+  letter-spacing: 5px;
+  padding: 5px;
+  line-height: 1;
+  border: 2px dashed;
+}
+.navlinks {
+  padding: 10px;
+}
+.navlinks a {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: 45px;
+  letter-spacing: 2px;
+  line-height: 2;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0.7;
+}
+
+.navlinks a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.navlinks a:hover {
+  opacity: 1;
+}
+
+.navlinks a:hover::before {
+  width: 100%;
+  opacity: 1;
+}
+
+#navBar .menu-icon {
+  display: none;
+}
+.menu-icon i {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* Left Side */
+
+.left {
+  position: relative;
+  width: 30%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.left .left-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00000038;
+}
+
+.menu-container {
+  width: 100%;
+  position: relative;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  padding: 10px;
+  color: #fff;
+  opacity: 0.6;
+  margin-bottom: 25px;
+  display: flex;
+  gap: 15px;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.menu .text > h2 {
+  user-select: none;
+  font-size: 1.2vw;
+  white-space: nowrap;
+  position: relative;
+  margin-bottom: 5px;
+  border-bottom: 2px solid #fff;
+}
+.menu .text > p {
+  user-select: none;
+  font-size: 1vw;
+}
+.menu:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  background-image: linear-gradient(to right, #00000096, transparent);
+}
+
+.left .scroll {
+  position: absolute;
+  bottom: -2%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transform: rotate(-90deg);
+  transform-origin: 0% 50%;
+  color: #fff;
+}
+
+.scroll .line {
+  width: 70px;
+  height: 2px;
+  background-color: #ffffff;
+}
+.scroll h3 {
+  font-size: 10px;
+  white-space: nowrap;
+}
+/* ======================================= */
+/* Right Part */
+.right {
+  position: relative;
+  width: 70%;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 30px;
+}
+.right-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #384d5050;
+  z-index: 5;
+}
+.right-content {
+  text-align: right;
+  z-index: 99;
+}
+
+.text-container > h4 {
+  font-size: 4vw;
+  letter-spacing: 5px;
+}
+.text-container > h2 {
+  font-size: 8vw;
+  line-height: 0.8;
+  margin-bottom: 70px;
+}
+.right-content .searchbox {
+  /* width: 80%; */
+  height: 40px;
+  border-bottom: 3px solid #fff;
+  text-align: left;
+}
+.searchbox i {
+  cursor: pointer;
+  width: 20%;
+  font-size: 22px;
+}
+.right-content .searchbox input {
+  width: 80%;
+  padding: 5px 10px;
+  margin-left: 5px;
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 15px;
+}
+.searchbox input::placeholder {
+  font-size: 15px;
+  color: #fff;
+  font-weight: 600;
+}
+.copyright {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  font-weight: 600;
+  letter-spacing: 2px;
+  z-index: 99;
+}
+
+@media (max-width: 1100px) {
+  #main-container {
+    flex-direction: column;
+  }
+  #navBar .menu-icon {
+    display: initial;
+  }
+
+  #navBar .navlinks {
+    display: none;
+  }
+
+  #navBar #logo {
+    font-size: 18px;
+  }
+  .left {
+    width: 100%;
+    height: 100vh;
+  }
+  .right {
+    width: 100%;
+    height: 100vh;
+  }
+  .menu .text h2 {
+    font-size: 25px;
+  }
+
+  .menu .text p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 900px) {
+  #main-container {
+    flex-direction: column;
+  }
+  #navBar {
+    padding: 10px 15px;
+  }
+
+  #navBar #logo {
+    font-size: 15px;
+  }
+
+  .left {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .menu .text h2 {
+    font-size: 15px;
+  }
+
+  .menu .text p {
+    font-size: 12px;
+  }
+
+  .right {
+    width: 100%;
+    height: 100vh;
+  }
+  .right-content {
+    width: 100%;
+  }
+  .right-content h2 {
+    font-size: 60px;
+  }
+  .right-content h4 {
+    line-height: 40px;
+    font-size: 30px;
+  }
+  .right .copyright {
+    font-size: 10px;
+  }
+}

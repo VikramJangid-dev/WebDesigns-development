@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Fuggles&family=Montserrat:wght@300;400;600;700;800&family=Poppins:wght@400;600;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.left {
+  width: 80%;
+  height: 100%;
+}
+.left #ltop {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  background-image: url(https://images.unsplash.com/photo-1477554193778-9562c28588c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+  background-position: center;
+  background-size: cover;
+}
+#ltop .nav > h1 {
+  width: 100%;
+  color: #fff;
+  padding: 1rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#ltop > .ltop-arrow {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 70px;
+  height: 55px;
+  background-color: #afadad;
+  color: #fff;
+  font-size: 2rem;
+  transition: background-color 0.3s ease-out;
+  cursor: pointer;
+}
+#ltop > .ltop-arrow:hover {
+  background-color: #838181;
+}
+
+#lbottom {
+  padding: 4rem 4rem;
+  width: 100%;
+  height: 30%;
+  color: #fff;
+  background-color: #000000d7;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+#lbottom .side-text {
+  font-size: 18px;
+}
+#lbottom .text-left {
+  width: 30%;
+  margin-left: 8%;
+  margin-right: 15%;
+}
+#lbottom .text-left > h2 {
+  font-size: 2.5rem;
+}
+#lbottom .text-right > h3 {
+  font-size: 1.5rem;
+}
+#lbottom .text-right > .basic-row {
+  font-size: 14px;
+  margin: 1.2rem 0;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+.basic-row .row-box{
+  gap:10px;
+  align-items: flex-start;
+}
+.basic-row .row-box i{
+  font-size: 18px;
+}
+.basic-row .row-box .text>h3{
+  letter-spacing: 2px;
+}
+
+/* ================================= */
+/* Right Side */
+.right {
+  width: 20%;
+  height: 100%;
+  background-color: lightblue;
+}
+.right #rtop {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  background: no-repeat
+    url(https://images.unsplash.com/photo-1524055988636-436cfa46e59e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80);
+  background-size: cover;
+  background-position: bottom left;
+  display: flex;
+  flex-direction: column;
+  padding: 25% 10%;
+}
+.rtop-icons {
+  flex-direction: column;
+  gap: 1.2rem;
+  position: absolute;
+  top: 2%;
+  right: 5%;
+}
+.rtop-icons i {
+  color: #adbead;
+  font-size: 1.8rem;
+  transition: all 0.3s ease-out;
+}
+.rtop-icons i:hover {
+  color: #666e57;
+  cursor: pointer;
+}
+#rtop > a {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #adbead;
+  text-decoration: none;
+  margin-block: 1rem;
+  transition: all 0.3s ease-out;
+  position: relative;
+}
+
+#rtop > a::before {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 15px;
+  height: 2px;
+  transition: opacity 0.3s ease-in-out;
+}
+#rtop > a:hover {
+  color: #666e57;
+  margin-left: 20px;
+}
+#rtop > a:hover::before {
+  opacity: 1;
+  background-color: #666e57;
+}
+
+#rtop > .rtop-arrow {
+  position: absolute;
+  left: 8%;
+  bottom: 4%;
+  height: 55px;
+  width: 55px;
+  background: #0000008a;
+  color: #fff;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  transition: background 0.3s ease-in-out;
+  cursor: pointer;
+}
+#rtop > .rtop-arrow:hover {
+  background: #000000af;
+}
+
+.right #rbottom {
+  align-items: flex-end;
+  width: 100%;
+  height: 30%;
+  padding: 1.5rem;
+  color: #000;
+  background: url(https://images.unsplash.com/photo-1534296000128-e754fd87f8dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1972&q=80);
+  background-position: bottom;
+  background-size: cover;
+}
+#rbottom > .rectangle {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background-color: #fff;
+}
+#rbottom > .rectangle>h6{
+  color: #666e57;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2px;
+  line-height: 2;
+}
+.rectangle > p {
+  color: #000;
+  font-weight: 500;
+  font-size: 12px;
+}
