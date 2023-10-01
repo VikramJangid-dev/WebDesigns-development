@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Fuggles&family=Montserrat:wght@300;400;600;700;800&family=Poppins:wght@400;600;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.main__container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.nav {
+  width: 100%;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2vw;
+  background-color: #fff;
+}
+
+.nav .links {
+  display: flex;
+  gap: 4vw;
+}
+
+.nav .links > a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2vw;
+  font-weight: 600;
+  opacity: 0.6;
+  transition: opacity 0.3s ease-in-out;
+}
+.nav .links > a:hover {
+  opacity: 1;
+}
+.nav .nav-right {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  gap: 10px;
+}
+
+.nav .nav-right button {
+  font-size: 1vw;
+  font-weight: 600;
+  color: #fff;
+  background: lightseagreen;
+  padding: 0.8vw 2.5vw;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 2px;
+}
+.nav-right i {
+  display: none;
+}
+
+/* Hero Section =====================*/
+
+.home {
+  display: flex;
+  width: 100%;
+  min-height: 90vh;
+}
+
+.left {
+  position: relative;
+  width: 35%;
+  min-height: 90vh;
+}
+
+.left .text {
+  width: 80%;
+  position: absolute;
+  top: 10%;
+  right: -30%;
+}
+.left .text h1 {
+  font-size: 3vw;
+  font-weight: 600;
+  line-height: 1;
+}
+.left .text p {
+  width: 50%;
+  font-size: 1vw;
+  margin: 2vw 0;
+}
+.left .text button {
+  font-size: 1vw;
+  font-weight: 600;
+  color: #fff;
+  background: lightseagreen;
+  padding: 1vw 3.8vw;
+  border: none;
+  border-radius: 5px;
+}
+
+.center {
+  width: 40%;
+  min-height: 90vh;
+  background-image: url(./image/center-img.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5vw;
+  width: 25%;
+  min-height: 90vh;
+}
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.5vw;
+  height: 5.5vw;
+  font-size: 1.5vw;
+  color: #fff;
+  background-color: #000;
+  border-radius: 50%;
+}
+.details .col {
+  margin-bottom: 12px;
+}
+.details .col h5 {
+  font-size: 2vw;
+  font-weight: 600;
+}
+.details .col h6 {
+  font-size: 1.8vw;
+  font-weight: 400;
+  opacity: 0.8;
+}
+.icons {
+  display: flex;
+  justify-content: space-between;
+  font-size: 3vw;
+}
+
+/* Responsive Code */
+
+@media (max-width: 500px) {
+  .nav .links {
+    display: none;
+  }
+  .nav .nav-right button {
+    font-size: 2.8vw;
+    font-weight: 700;
+    padding: 2.5vw 4vw;
+  }
+  .nav-right i {
+    display: inline-block;
+    font-size: 8vw;
+  }
+
+  .home {
+    flex-direction: column;
+  }
+
+  .left {
+    width: 100%;
+    min-height: 14vh;
+    padding: 5vw;
+  }
+
+  .left .text {
+    position: static;
+  }
+
+  .left .text h1 {
+    font-size: 7.5vw;
+  }
+  .left .text p {
+    width: 100%;
+    font-size: 3vw;
+    margin: 5vw 0;
+  }
+  .left .text button {
+    font-size: 3.5vw;
+    padding: 2vw 5vw;
+  }
+
+  .center {
+    width: 100%;
+    min-height: 50vh;
+    background-position: center;
+  }
+
+  .right {
+    align-items: center;
+    padding: 10vw 10vw;
+    width: 100%;
+    min-height: 45vh;
+  }
+  .circle {
+    width: 15vw;
+    height: 15vw;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #000;
+    border-radius: 50%;
+  }
+  .details .col {
+    margin-block: 8vw;
+  }
+  .details .col h5 {
+    font-size: 18px;
+  }
+  .details .col h6 {
+    font-size: 15px;
+  }
+  .icons {
+    font-size: 20px;
+    gap: 5vw;
+  }
+}
